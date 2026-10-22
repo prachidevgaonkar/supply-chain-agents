@@ -4,13 +4,25 @@ A no-code agent for order-to-cash teams. It diagnoses EDI purchase orders (X12 8
 
 Built for Google's Workflow Builder (formerly Agent Designer) in Gemini Enterprise, but the instructions work in any agent builder that supports a main agent with subagents.
 
-## The design
+**Process:** Order-to-cash (order management)
 
-```
-EDI Order Exception Triage            (main agent: triage, verdict, routing)
-├── EDI Validation Checker            (items, units, ship-to, dates, duplicates)
-├── Pricing & Contract Checker        (PO price vs contract, tolerance)
-└── Customer Communication Drafter    (drafts customer emails, never sends)
+**POC question:** can an agent triage held EDI orders, find the root cause, and recommend the right fix accurately enough that reps trust it and resolve orders faster?
+
+## Design
+
+```mermaid
+flowchart TD
+    U["Rep asks: Triage PO 4500123"] --> M["EDI Order Exception Triage<br/>(main agent)"]
+    M <-->|"PO lines out, findings back"| V["EDI Validation Checker<br/>items, units, ship-to, dates, duplicates"]
+    M <-->|"PO lines out, findings back"| P["Pricing & Contract Checker<br/>PO price vs contract, value at risk"]
+    M --> S{"One status per PO"}
+    S --> R["RELEASE<br/>false alarm"]
+    S --> F["FIX INTERNALLY<br/>our data is wrong"]
+    S --> C["NEEDS CUSTOMER<br/>customer data is wrong"]
+    S --> X["ESCALATE<br/>conflict, gap or high value"]
+    C --> D["Customer Communication Drafter<br/>drafts email, never sends"]
+    classDef main fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
+    class M main
 ```
 
 Each held PO gets one status:
@@ -21,6 +33,26 @@ Each held PO gets one status:
 | FIX INTERNALLY | Our master data is wrong or missing |
 | NEEDS CUSTOMER | The customer sent wrong data; a draft email is included |
 | ESCALATE | Conflicting evidence, missing data, or high value at risk |
+
+## Questions it answers
+
+- Why is PO 4500123 from Acme Retail on hold, and how do I fix it?
+- Show all held POs for Northwind Distribution.
+- Which held orders need the customer to act, and which can we fix ourselves?
+- Is the price on this PO below contract, and how much is at risk?
+- Is this PO a duplicate of one we already received?
+- Draft an email asking Acme to correct the ship-to on PO 4500125.
+
+## Data it needs
+
+| Data | What it contains | Typical source | Add as |
+| --- | --- | --- | --- |
+| Held orders | One row per held PO line: PO number, customer, buyer part number, quantity, unit, price, ship-to code, requested date, error code | EDI translator or ERP exception export | Data source (Sheet) |
+| Item cross-reference | Customer part number to internal SKU, valid units, pack size, status, replacement SKU | ERP item master | Data source (Sheet) |
+| Contract prices | Customer, SKU, contract price, valid dates, price tolerance | Pricing system | Data source (Sheet) |
+| Customer and ship-to master | Valid ship-to codes and addresses per customer, active or inactive | ERP customer master | Data source (Sheet) |
+| Trading partner guides | Each customer's EDI requirements | Retailer portals | Knowledge (PDFs) |
+| Resolution playbook | Fixes, owners, lead time and escalation rules for each exception type | Internal | Knowledge (doc) |
 
 ## Files
 
