@@ -1,0 +1,5 @@
+customer,ship_to_code,address,status
+Acme Retail,ST-DAL-01,"1200 Commerce St, Dallas, TX",Active
+Acme Retail,ST-HOU-01,"88 Port Rd, Houston, TX",Active
+Acme Retail,ST-HOU-09,"15 Old Mill Ln, Houston, TX",Inactive
+Northwind Distribution,NW-ATL-02,"400 Peachtree Industrial Blvd, Atlanta, GA",Active

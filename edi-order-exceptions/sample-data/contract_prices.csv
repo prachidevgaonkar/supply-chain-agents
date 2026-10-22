@@ -1,0 +1,5 @@
+customer,sku,contract_price,currency,uom,valid_from,valid_to,tolerance_pct
+Acme Retail,SKU-10010,50.00,USD,CS,2026-01-01,2026-12-31,0.5
+Acme Retail,SKU-10020,32.00,USD,CS,2026-01-01,2026-12-31,0.5
+Northwind Distribution,SKU-55500,30.00,USD,CS,2026-01-01,2026-12-31,0.5
+Northwind Distribution,SKU-77700,20.00,USD,CS,2026-01-01,2026-12-31,0.5

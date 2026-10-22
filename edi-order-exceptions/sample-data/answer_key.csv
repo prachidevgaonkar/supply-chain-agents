@@ -1,0 +1,9 @@
+po_number,expected_status,expected_root_cause
+4500123,NEEDS CUSTOMER,"Line 1 price 48.00 is 4% below the 50.00 contract price, outside 0.5% tolerance; line 2 is fine"
+4500124,FIX INTERNALLY,"Buyer part AC-2050 has no item cross-reference; master data team must add it"
+4500125,NEEDS CUSTOMER,"Ship-to ST-HOU-09 is inactive; ST-HOU-01 is the active Houston location"
+4500126,ESCALATE,"Price 40.00 vs contract 50.00 on 2000 CS puts 20000 USD at risk, above the 10000 escalation limit"
+7700310,FIX INTERNALLY,"48 EA converts cleanly to 2 CS at 24 EA per CS; convert the unit and release"
+7700311,FIX INTERNALLY,"Price 21.50 is above the 20.00 contract price (900 USD at risk); likely a price increase not yet loaded"
+7700312,NEEDS CUSTOMER,"PO 7700312 was received twice; confirm with the customer whether it is a resend or a new order"
+7700313,RELEASE,"Price 20.05 vs 20.00 is 0.25%, within the 0.5% tolerance; false alarm"

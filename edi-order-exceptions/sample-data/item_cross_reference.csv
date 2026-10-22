@@ -1,0 +1,5 @@
+customer,buyer_part_number,sku,description,valid_uoms,pack_size_ea_per_cs,status,replacement_sku
+Acme Retail,AC-1001,SKU-10010,Stainless water bottle 750ml,CS,12,Active,
+Acme Retail,AC-1002,SKU-10020,Insulated lunch bag,CS,6,Active,
+Northwind Distribution,NW-555,SKU-55500,Kraft shipping tape 48mm,CS,24,Active,
+Northwind Distribution,NW-777,SKU-77700,Corrugated box 12x12x12,CS,25,Active,
