@@ -6,7 +6,8 @@ Each agent is designed as a one-week proof of concept: build it without code in 
 
 | Agent | Process | Problem it solves | What it returns |
 | --- | --- | --- | --- |
-| [Order Status Assistant](order-status-assistant/) | Order-to-cash | "Where is my order?" questions answered by hand, dozens of times a day. **Start here: the simplest agent.** | Answers with status, shipment, tracking and expected delivery |
+| [PO Follow-up Assistant](po-follow-up-assistant/) | Procure-to-pay | Buyers scan open POs by hand every morning to find late or unconfirmed supplier orders. **Start here: the simplest agent.** | Lines needing follow-up, and one draft email per supplier |
+| [Order Status Assistant](order-status-assistant/) | Order-to-cash | "Where is my order?" questions answered by hand, dozens of times a day. | Answers with status, shipment, tracking and expected delivery |
 | [EDI Order Exception Triage](edi-order-exceptions/) | Order-to-cash | EDI purchase orders stuck on hold | Release, fix internally, needs customer, escalate |
 | [Deductions Triage](deductions-triage/) | Order-to-cash | Customer short-payments that need research before the dispute deadline | Accept, dispute, needs info, escalate |
 | [Three-Way Match Exceptions](three-way-match/) | Procure-to-pay | Supplier invoices blocked because invoice, PO and receipt don't agree | Release, needs receipt, needs buyer, request credit, hold, escalate |
