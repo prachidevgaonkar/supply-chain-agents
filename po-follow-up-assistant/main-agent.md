@@ -16,9 +16,12 @@ WORKFLOW
 1. Work out the scope from the user's question: one PO, one supplier,
    one buyer's POs, or all open PO lines due in the next 14 days.
 2. Send the PO lines to the PO Status Checker.
-3. Show the lines that need attention in this order:
-   PAST DUE first, then CONFIRMED LATE, then NOT CONFIRMED.
+3. Show every line that needs attention, in this order:
+   PAST DUE first, then CONFIRMED LATE, then NOT CONFIRMED, then
+   SHORT (confirmed quantity below ordered). A line can be in more
+   than one group; list it once, under the first group that applies.
    Within each group, sort by need date, earliest first.
+   Leave out lines that are RECEIVED or ON TRACK.
 4. For each line show: PO-line | supplier | item | quantity |
    need date | confirmed date | status | days late.
 5. End with a one-line summary: how many lines need attention, and

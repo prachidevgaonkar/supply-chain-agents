@@ -1,0 +1,21 @@
+po_number,line,supplier,item,description,quantity,uom,order_date,need_date,buyer
+4100231,1,Contoso Metals,RM-1001,Steel bracket 40mm,500,EA,2026-10-12,2026-10-30,Priya Shah
+4100231,2,Contoso Metals,RM-1002,Steel bracket 60mm,300,EA,2026-10-12,2026-11-06,Priya Shah
+4100245,1,Contoso Metals,RM-1010,Aluminum plate 2mm,120,EA,2026-10-21,2026-11-09,Priya Shah
+4100246,1,Contoso Metals,RM-1011,Aluminum plate 4mm,80,EA,2026-10-29,2026-11-13,Priya Shah
+4100250,1,Fabrikam Plastics,PL-2001,"ABS housing, left",2000,EA,2026-10-14,2026-11-04,Priya Shah
+4100250,2,Fabrikam Plastics,PL-2002,"ABS housing, right",2000,EA,2026-10-14,2026-11-04,Priya Shah
+4100251,1,Fabrikam Plastics,PL-2010,Polycarbonate lens,1500,EA,2026-10-20,2026-11-10,Priya Shah
+4100260,1,Northwind Electronics,EL-3001,Control board v2,400,EA,2026-10-05,2026-10-28,Marcus Lee
+4100260,2,Northwind Electronics,EL-3002,Power supply 24V,400,EA,2026-10-05,2026-11-03,Marcus Lee
+4100261,1,Northwind Electronics,EL-3010,Wiring harness A,600,EA,2026-10-22,2026-11-12,Marcus Lee
+4100262,1,Northwind Electronics,EL-3020,Temperature sensor,1000,EA,2026-10-15,2026-11-11,Marcus Lee
+4100270,1,Adatum Fasteners,FS-4001,M6 hex bolt,20000,EA,2026-10-19,2026-11-05,Marcus Lee
+4100270,2,Adatum Fasteners,FS-4002,M6 lock nut,20000,EA,2026-10-19,2026-11-05,Marcus Lee
+4100271,1,Adatum Fasteners,FS-4010,M4 screw,50000,EA,2026-10-27,2026-11-16,Marcus Lee
+4100280,1,Tailspin Packaging,PK-5001,Shipping carton 40x30x30,3000,EA,2026-10-13,2026-10-29,Priya Shah
+4100280,2,Tailspin Packaging,PK-5002,Foam insert,3000,EA,2026-10-13,2026-11-09,Priya Shah
+4100281,1,Tailspin Packaging,PK-5010,Pallet wrap,200,RL,2026-10-23,2026-11-12,Priya Shah
+4100290,1,Wingtip Motors,MT-6001,Brushless motor 50W,250,EA,2026-10-08,2026-11-06,Marcus Lee
+4100290,2,Wingtip Motors,MT-6002,Motor mount,250,EA,2026-10-08,2026-11-06,Marcus Lee
+4100291,1,Wingtip Motors,MT-6010,Gearbox 10:1,150,EA,2026-10-16,2026-12-04,Marcus Lee

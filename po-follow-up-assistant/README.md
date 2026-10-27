@@ -47,6 +47,12 @@ flowchart TD
 
 Refresh the exports daily during the pilot.
 
+## Try it with sample data
+
+[`sample-data/`](sample-data/) has a fictional dataset: 20 PO lines across 6 suppliers, covering every status. It includes the three spreadsheets, a follow-up guide to upload as Knowledge, a computed [answer key](sample-data/answer_key.csv), and a [test script](sample-data/TESTING.md) with nine questions and their correct answers.
+
+To load it: in Google Drive, upload each CSV and open it with Google Sheets (or use **File > Import** in a blank sheet). Then attach the three sheets in **Add data sources & tools**.
+
 ## POC success bar
 
 Run the agent on last Monday's open PO report. Your buyers already know which lines turned into problems; that's your answer key.
